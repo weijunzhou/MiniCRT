@@ -40,7 +40,7 @@ void free(void *ptr)
         header = header->prev;
     }
 
-    if (header->next != NULL && header->prev->type == HEAP_BLOCK_FREE)
+    if (header->next != NULL && header->next->type == HEAP_BLOCK_FREE)
     {
         // merge
         header->size += header->next->size;
